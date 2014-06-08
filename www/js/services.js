@@ -1,6 +1,6 @@
 (function () {
   "use strict";
 
-  var services = angular.module('app.services', ['restangular']);
+  var services = angular.module('app.services', []);
 
 })();
