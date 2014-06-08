@@ -92,6 +92,7 @@
         if ($window.StatusBar) {
           StatusBar.styleDefault();
         }
+        console.log("Ionic is ready.");
       });
     }
   ]);
