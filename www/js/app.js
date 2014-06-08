@@ -73,7 +73,7 @@
 
       $rootScope.$on('event:auth-login-required', function () {
         console.log("Login required.");
-        $state.go('value-proposition', {}, { location: "replace" });
+        $state.go('loading-screen', {}, { location: "replace" });
       });
 
       $rootScope.$on('event:auth-login-success', function () {
