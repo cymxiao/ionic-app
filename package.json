@@ -29,8 +29,8 @@
     "ios-deploy": "^1.0.6"
   },
   "scripts": {
-    "postinstall": "gulp init",
-    "test": "gulp test",
-    "start": "gulp run"
+    "postinstall": "./node_modules/.bin/gulp init",
+    "test": "./node_modules/.bin/gulp test",
+    "start": "./node_modules/.bin/gulp run"
   }
 }

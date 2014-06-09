@@ -26,14 +26,26 @@
   ]);
 
   app.run([
+    '$rootScope',
     '$window',
     '$ionicPlatform',
-    function ($window, $ionicPlatform) {
+    function ($rootScope, $window, $ionicPlatform) {
       $ionicPlatform.ready(function () {
         if ($window.StatusBar) {
           StatusBar.styleDefault();
         }
         console.log("Ionic is ready.");
+      });
+
+      $rootScope.$on("$stateChangeError", function (event, toState, toParams, fromState, fromParams, error) {
+        console.log("stateChangeError:");
+        console.log(error);
+      });
+
+      $rootScope.$on("$stateNotFound", function (event, unfoundState, fromState) {
+        console.log("stateNotFound:");
+        console.log(unfoundState);
+        console.log(fromState);
       });
     }
   ]);
